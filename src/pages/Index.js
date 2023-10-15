@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 const Index = (props) => {
 
@@ -20,7 +21,9 @@ const Index = (props) => {
                                 <td>{vehicle.vehicle_make}</td>
                                 <td>{vehicle.issue_description}</td>
                                 <td>{vehicle.state}</td>
+                                <Link to={`/vehicle/${vehicle._id}`}>
                                 <td>View</td>
+                                </Link>
                             </tr>
                         ))}
                     </tbody>

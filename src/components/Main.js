@@ -25,7 +25,8 @@ const Main = (props) => {
     return(
         <main>
             <Routes>
-                <Route path='/' element={<Index vehicle={vehicle}/>} />
+                <Route path='/vehicle' element={<Index vehicle={vehicle}/>} />
+                <Route path='/vehicle/:id' element={<Show vehicle={vehicle}/>} />
             </Routes>
         </main>
     )
