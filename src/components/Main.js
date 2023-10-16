@@ -16,19 +16,35 @@ const Main = (props) => {
         setVehicle(data)
     }
 
+    const updateVehicle = async (vehicle, id) => {
+        await fetch(`${URL}/${id}`, {
+            method: 'put',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(vehicle)
+        })
+        getVehicle()
+        console.log(vehicle)
+    }
+
+    const deleteVehicle = async (id) => {
+        await fetch(`${URL}/${id}`, {
+            method: 'delete'
+        })
+        getVehicle()
+    }
+
     useEffect(() => { 
         getVehicle()
     }, [])
 
-    const loaded = () => {
-        
-    }
     return(
         <main>
             <Routes>
                 <Route path='/vehicle' element={<Index vehicle={vehicle}/>} />
                 <Route path='/vehicle/:id' element={<Show vehicle={vehicle}/>} />
-                <Route path='/edit/:id' element={<Edit vehicle={vehicle}/>} />
+                <Route path='/edit/:id' element={<Edit vehicle={vehicle} updateVehicle={updateVehicle} deleteVehicle={deleteVehicle}/>} />
             </Routes>
         </main>
     )
