@@ -1,5 +1,7 @@
 import {useEffect, useState} from 'react'
 import {Routes, Route} from 'react-router-dom'
+import Header from './Header'
+import HeaderIndex from './HeaderIndex'
 import Index from '../pages/Index'
 import Show from '../pages/Show'
 import Edit from '../pages/Edit'
@@ -55,10 +57,10 @@ const Main = (props) => {
     return(
         <main>
             <Routes>
-                <Route path='/vehicle' element={<Index vehicle={vehicle}/>} />
-                <Route path='/create' element={<Create createVehicle={createVehicle}/>} />
-                <Route path='/vehicle/:id' element={<Show vehicle={vehicle}/>} />
-                <Route path='/edit/:id' element={<Edit vehicle={vehicle} updateVehicle={updateVehicle} deleteVehicle={deleteVehicle}/>} />
+                <Route path='/vehicle' element={[<HeaderIndex/>,<Index vehicle={vehicle}/>]} />
+                <Route path='/create' element={[<Header/>,<Create createVehicle={createVehicle}/>]} />
+                <Route path='/vehicle/:id' element={[<Header/>,<Show vehicle={vehicle}/>]} />
+                <Route path='/edit/:id' element={[<Header/>,<Edit vehicle={vehicle} updateVehicle={updateVehicle} deleteVehicle={deleteVehicle}/>]} />
             </Routes>
         </main>
     )
