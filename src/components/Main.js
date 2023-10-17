@@ -3,6 +3,7 @@ import {Routes, Route} from 'react-router-dom'
 import Index from '../pages/Index'
 import Show from '../pages/Show'
 import Edit from '../pages/Edit'
+import Create from '../pages/Create'
 
 // URL should have YOUR HEROKU URL for your backend, make sure you include the trailing slash
 const URL = "http://localhost:4000/vehicle"
@@ -14,6 +15,18 @@ const Main = (props) => {
         const response = await fetch(URL)
         const data = await response.json()
         setVehicle(data)
+    }
+
+    const createVehicle = async (vehicle) => {
+        const response = await fetch(URL, {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(vehicle)
+        })
+        const createdVehicle = await response.json()
+        setVehicle((prev) => [...prev, createdVehicle])
     }
 
     const updateVehicle = async (vehicle, id) => {
@@ -43,6 +56,7 @@ const Main = (props) => {
         <main>
             <Routes>
                 <Route path='/vehicle' element={<Index vehicle={vehicle}/>} />
+                <Route path='/create' element={<Create createVehicle={createVehicle}/>} />
                 <Route path='/vehicle/:id' element={<Show vehicle={vehicle}/>} />
                 <Route path='/edit/:id' element={<Edit vehicle={vehicle} updateVehicle={updateVehicle} deleteVehicle={deleteVehicle}/>} />
             </Routes>

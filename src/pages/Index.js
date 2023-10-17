@@ -22,7 +22,7 @@ const Index = (props) => {
                                 <td>{vehicle.issue_description}</td>
                                 <td>{vehicle.state}</td>
                                 <Link to={`/vehicle/${vehicle._id}`}>
-                                <td>View</td>
+                                <button>View</button>
                                 </Link>
                             </tr>
                         ))}
