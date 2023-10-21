@@ -10,3 +10,19 @@ body {
 button {
   margin-bottom: 1px;
 }
+
+table {
+  /* table-layout: auto; */
+  overflow: hide;
+  white-space: nowrap;
+}
+
+.description {
+  max-width: 25vw;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.icon {
+  width: 5vw;
+}

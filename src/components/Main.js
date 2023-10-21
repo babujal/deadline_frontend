@@ -8,7 +8,7 @@ import Edit from '../pages/Edit'
 import Create from '../pages/Create'
 
 // URL should have YOUR HEROKU URL for your backend, make sure you include the trailing slash
-const URL = "http://localhost:4000/vehicle"
+const URL = "https://node-api-deadline-1dce381c838c.herokuapp.com/vehicle"
 
 const Main = (props) => {
     const [vehicle, setVehicle] = useState(null)
