@@ -10,7 +10,7 @@ const Index = (props) => {
         }
 
         const handleStringToIcon = (status) => {
-            const icon = stateIcons.hasOwnProperty(status)
+            stateIcons.hasOwnProperty(status) //I have remove a var here redo icon var if problems
             const iconImg = stateIcons[status]
             return (
                 iconImg
