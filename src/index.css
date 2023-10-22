@@ -5,16 +5,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(236, 244, 251);
 }
 
 button {
   margin-bottom: 1px;
 }
 
-table {
+table.table {
   /* table-layout: auto; */
   overflow: hide;
   white-space: nowrap;
+  --bs-table-bg: rgb(236, 244, 251);
+  /* margin-top: 0.5rem; */
 }
 
 .description {
@@ -25,4 +28,11 @@ table {
 
 .icon {
   width: 5vw;
+}
+
+.topNav {
+  background-color: rgb(163, 204, 238);
+  padding: 1rem;
+  box-shadow: 0px 1px 1px #777;
+  margin-bottom: 1rem;
 }
