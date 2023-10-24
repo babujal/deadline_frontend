@@ -7,7 +7,7 @@ function Login() {
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
-fetch
+
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
@@ -16,7 +16,10 @@ fetch
     event.preventDefault();
     console.log(`Username: ${username}, Password: ${password}`);
     // Add logic to authenticate user here
+    // Assuming authentication is successful, redirect user to dashboard
+    window.location.href = '/vehcile';
   };
+
 
   return (
     <form onSubmit={handleSubmit}>
