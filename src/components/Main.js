@@ -10,6 +10,22 @@ import Create from '../pages/Create'
 // URL should have YOUR HEROKU URL for your backend, make sure you include the trailing slash
 const URL = "https://node-api-deadline-1dce381c838c.herokuapp.com/vehicle"
 
+//User 
+const createUser = async (user) => {
+    const response = await fetch(URL+'/register', {
+        method: 'post',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    })
+    console.log(response)
+    const createdUser = await response.json()
+
+    
+}
+    
+
 const Main = (props) => {
     const [vehicle, setVehicle] = useState(null)
 
