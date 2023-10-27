@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 
 const Register = (props) => {
 
-    const navigate = props.navigate
-
     const [newForm, setNewForm] = useState({
         username: '',
         password: ''
