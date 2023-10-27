@@ -1,6 +1,9 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Register = (props) => {
+
+    const navigate = props.navigate
 
     const [newForm, setNewForm] = useState({
         username: '',
@@ -48,6 +51,7 @@ const Register = (props) => {
                 </div>
                 <input type='submit' value='Register' className="btn btn-primary" />
             </form>
+            <Link to="/login"><button className="btn btn-primary mt-3">Login</button></Link>
         </div>
     )
 }

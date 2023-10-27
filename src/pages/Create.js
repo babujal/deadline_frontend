@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import { useNavigate, } from 'react-router-dom'
 
 const Create = (props) => {
+    const navigate = useNavigate()
 
     const [newForm, setNewForm] = useState({
         vehicle_make: '',
@@ -17,6 +19,7 @@ const Create = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         props.createVehicle(newForm)
+        navigate('/vehicle')
     }
 
     return (
