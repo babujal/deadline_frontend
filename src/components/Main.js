@@ -9,6 +9,7 @@ import Edit from '../pages/Edit'
 import Create from '../pages/Create'
 import Register from '../pages/Register'
 import Login from '../pages/Login'
+import Footer from './Footer'
 
 // URL should have YOUR HEROKU URL for your backend, make sure you include the trailing
 const URL = "https://node-api-deadline-1dce381c838c.herokuapp.com/vehicle"
@@ -23,6 +24,10 @@ const Main = (props) => {
 
     const userLogin = () => {
         return setUser(true)
+    }
+
+    const userLogout = () => {
+        return setUser(false)
     }
 
     const getVehicle = async () => {
@@ -93,7 +98,7 @@ const Main = (props) => {
             <Routes>
                 <Route path='/login' element={[<Header/>,<Login createUser={createUser} userLogin={userLogin} URL={URL}/>]} />
                 <Route path='/register' element={[<Header/>,<Register createUser={createUser} navigate={navigate}/>]} /> 
-                <Route path='/vehicle' element={user ? ([<HeaderIndex/>,<Index vehicle={vehicle}/>]) : (<Navigate to='/register' />)} />
+                <Route path='/vehicle' element={user ? ([<HeaderIndex/>,<Index vehicle={vehicle}/>,<Footer userLogout={userLogout}/>]) : (<Navigate to='/register' />)} />
                 <Route path='/create' element={[<Header/>,<Create createVehicle={createVehicle}/>]} />
                 <Route path='/vehicle/:id' element={[<Header/>,<Show vehicle={vehicle}/>]} />
                 <Route path='/edit/:id' element={[<Header/>,<Edit vehicle={vehicle} updateVehicle={updateVehicle} deleteVehicle={deleteVehicle}/>]} />
