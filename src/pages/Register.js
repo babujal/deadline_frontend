@@ -1,12 +1,13 @@
 import { useState } from 'react'
-import { useNavigate, } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-const Create = (props) => {
-    const navigate = useNavigate()
+const Register = (props) => {
+
+    const navigate = props.navigate
 
     const [newForm, setNewForm] = useState({
-        vehicle_make: '',
-        issue_description: ''
+        username: '',
+        password: ''
     })
 
     const handleChange = (event) => {
@@ -18,41 +19,41 @@ const Create = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        props.createVehicle(newForm)
-        navigate('/vehicle')
+        props.createUser(newForm)
     }
 
     return (
         <div className='container'>
             <form onSubmit={handleSubmit}>
                 <div className='row'>
-                    <label for="basic-url" class="form-label mt-3">Car Make</label>
-                    <div class="input-group mb-3 justify-content-center">
+                    <label for="basic-url" className="form-label mt-3">Type a user name</label>
+                    <div className="input-group mb-3 justify-content-center">
                         <input
                             type='text'
-                            value={newForm.vehicle_make}
-                            name='vehicle_make'
-                            placeholder='Make'
+                            value={newForm.username}
+                            name='username'
+                            placeholder='User Name'
                             onChange={handleChange}
                         />
                     </div>
                 </div>
                 <div className='row'>
-                    <label for="basic-url" class="form-label mt-3">Issue</label>
+                    <label for="basic-url" class="form-label mt-3">Choose a password</label>
                     <div class="input-group mb-3 justify-content-center">
                         <input
                             type='text'
-                            value={newForm.issue_description}
-                            name='issue_description'
-                            placeholder='Issues'
+                            value={newForm.password}
+                            name='password'
+                            placeholder='Password'
                             onChange={handleChange}
                         />
                     </div>
                 </div>
-                <input type='submit' value='Create Vehicle' className="btn btn-primary" />
+                <input type='submit' value='Register' className="btn btn-primary" />
             </form>
+            <Link to="/login"><button className="btn btn-primary mt-3">Login</button></Link>
         </div>
     )
 }
 
-export default Create
+export default Register

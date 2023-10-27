@@ -27,6 +27,7 @@ const Edit = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         props.updateVehicle(updateForm, params.id)
+        navigate('/vehicle')
     }
 
     const handleDelete = () => {
