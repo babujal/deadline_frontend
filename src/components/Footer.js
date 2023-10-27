@@ -2,7 +2,8 @@ const Footer = (props) => {
     //Logout button
     const logout =() => {
 
-//implement logout auth 
+//implement logout auth
+        props.userLogout()
     };
     return (
    //Footer 
