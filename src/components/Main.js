@@ -99,9 +99,9 @@ const Main = (props) => {
                 <Route path='/login' element={[<Header/>,<Login createUser={createUser} userLogin={userLogin} URL={URL}/>]} />
                 <Route path='/register' element={[<Header/>,<Register createUser={createUser} navigate={navigate}/>]} /> 
                 <Route path='/vehicle' element={user ? ([<HeaderIndex/>,<Index vehicle={vehicle}/>,<Footer userLogout={userLogout}/>]) : (<Navigate to='/register' />)} />
-                <Route path='/create' element={[<Header/>,<Create createVehicle={createVehicle}/>]} />
-                <Route path='/vehicle/:id' element={[<Header/>,<Show vehicle={vehicle}/>]} />
-                <Route path='/edit/:id' element={[<Header/>,<Edit vehicle={vehicle} updateVehicle={updateVehicle} deleteVehicle={deleteVehicle}/>]} />
+                <Route path='/create' element={[<Header/>,<Create createVehicle={createVehicle},<Footer userLogout={userLogout}/>]} />
+                <Route path='/vehicle/:id' element={[<Header/>,<Show vehicle={vehicle}/>,<Footer userLogout={userLogout}/>]} />
+                <Route path='/edit/:id' element={[<Header/>,<Edit vehicle={vehicle} updateVehicle={updateVehicle} deleteVehicle={deleteVehicle}/>,<Footer userLogout={userLogout}/>]} />
             </Routes>
         </main>
     )
