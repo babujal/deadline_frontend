@@ -25,10 +25,6 @@ const Main = (props) => {
         return setUser(true)
     }
 
-    const userLogout = () => {
-        return setUser(false)
-    }
-
     const getVehicle = async () => {
         const response = await fetch(URL)
         const data = await response.json()

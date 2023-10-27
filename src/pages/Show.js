@@ -1,4 +1,3 @@
-import {useState} from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
 const Show = (props) => {
@@ -11,7 +10,6 @@ const Show = (props) => {
 
     const editButton = () => {
         navigate(`/edit/${vehicle._id}`)
-        // console.log(vehicle)
     }
 
     const loaded = () => {

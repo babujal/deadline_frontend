@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom"
-import { useState } from 'react'
 
 const Index = (props) => {
-    const [user, setUser] = useState(false)
 
 
     ///////////////////////////
@@ -41,7 +39,7 @@ const Index = (props) => {
                                     <td>{vehicle.vehicle_make}</td>
                                     <td className="description">{vehicle.issue_description}</td>
                                     <td>
-                                        <img className="icon" src={handleStringToIcon(vehicle.state)} />
+                                        <img className="icon" src={handleStringToIcon(vehicle.state)} alt="Job status icon"/>
                                     </td>
                                     <Link to={`/vehicle/${vehicle._id}`}>
                                         <button type="button" class="btn btn-outline-secondary">
