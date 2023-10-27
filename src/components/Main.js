@@ -10,7 +10,7 @@ import Create from '../pages/Create'
 import Register from '../pages/Register'
 import Login from '../pages/Login'
 
-// URL should have YOUR HEROKU URL for your backend, make sure you include the trailing slash
+// URL should have YOUR HEROKU URL for your backend, make sure you include the trailing
 const URL = "https://node-api-deadline-1dce381c838c.herokuapp.com/vehicle"
 
 //"https://localhost:4000"
