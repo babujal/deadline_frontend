@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+## Dead Line express-react app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Overview
 
-## Available Scripts
+The Dead Line web application is designed to streamline vehicles on who needs repairs on a workshop, every mecanic with this app will be able to see all vehicle that has been inspected, this aproach solve the duplication on workorder. This README file provides an overview of the project, including the technologies used, the approach taken, unsolved problems, user stories, and notes for future reference.
 
-In the project directory, you can run:
 
-### `npm start`
+### Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-   **Node.js**: The backend server is built using Node.js, which allows me to run JavaScript on the server-side.
+-   **Express.js**: I use the Express.js framework for building the web application and handling routes.
+-   **MongoDB**: MongoDB was my choice of database for storing seafood product information.
+-   **Mongoose**: I used Mongoose to interact with the MongoDB database.
+-   **React**: React is used for the frontend side.
+-   **dotenv**: dotenv is used for managing environment variables.
+-   **HTML/CSS/Bootstrap**: I use HTML, CSS, & bootstrap for creating the front-end of the application.
+-   **Heroku **: Heroku was used to deploy the application.**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Approach
 
-### `npm test`
+We started by creating the backend, once the basics route were workinng we move on to the creation of the frontend.
+After that was done and working started workinng on my Index, show and other routes route and step by step builded a full restfull web app.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### User Stories
+- As a user I want to be able to see all vehicles entries on my workshop.
+- As a user I want to be able to create new entries.
+- As a user I want to be able to edit any entrie.
+- As a user I want to be able to create an account.
+- As a user I want to be able to Login to my account.
 
-### `npm run build`
+### Unsolved Problems
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   We would like to place a kind of track for work orders.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Notes to Self
 
-### `npm run eject`
+-   Refurnish the frontend structure.
+-   Improve auth.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Link to Hosted App
+The backend application is hosted on Heroku at: 
+-Backend side: https://node-api-deadline-1dce381c838c.herokuapp.com/vehicle
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Frontend side: https://floating-chamber-37367-77b015f14394.herokuapp.com/seafoodstore/stock
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To run the application locally, follow these steps:
 
-## Learn More
+1.  Clone the repository to your local machine.
+2.  Install dependencies using `npm install`.
+3.  Set up a MongoDB database and update the connection string in your `.env` file.
+4.  Start the server using `npm start`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author
+Alex Rodriguez
+William Fitzwater
+Chris Flores
