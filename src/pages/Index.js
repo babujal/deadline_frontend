@@ -2,7 +2,6 @@ import { Link } from "react-router-dom"
 
 const Index = (props) => {
 
-
     ///////////////////////////
     ///IndexPageRendering/////
     /////////////////////////
@@ -39,7 +38,7 @@ const Index = (props) => {
                                     <td>{vehicle.vehicle_make}</td>
                                     <td className="description">{vehicle.issue_description}</td>
                                     <td>
-                                        <img className="icon" src={handleStringToIcon(vehicle.state)} alt="Job status icon"/>
+                                        <img className="icon" src={handleStringToIcon(vehicle.state)} alt="Job status icon" />
                                     </td>
                                     <Link to={`/vehicle/${vehicle._id}`}>
                                         <button type="button" class="btn btn-outline-secondary">
@@ -62,8 +61,12 @@ const Index = (props) => {
     const loading = () => {
         return <h1>Loading...</h1>
     }
-    
-    return (<section>{props.vehicle ? loaded() : loading()}</section>)
+
+    return (
+        <div>
+            {props.vehicle ? loaded() : loading()}
+        </div>
+    )
 }
 
 export default Index
