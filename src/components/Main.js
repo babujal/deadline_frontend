@@ -66,8 +66,8 @@ const Main = (props) => {
             console.log(error)
             navigate('/register')
         }
-        userLogin()
-        navigate('/vehicle')
+        // userLogin()
+        // navigate('/vehicle')
     }
 
     const updateVehicle = async (vehicle, id) => {
